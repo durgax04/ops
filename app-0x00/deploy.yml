@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: my-crud-app
-          image: 951372799737.dkr.ecr.ap-south-1.amazonaws.com/gigax01/app-deploy-00x0:latest
+          image: 951372799737.dkr.ecr.ap-south-1.amazonaws.com/gigax01/app-deploy-00x0:bf51e4bab2f4bee12b2608eacab5e7960b2290c6
           ports:
             - containerPort: 3000
           env:
