@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-crud-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-crud-app
+  template:
+    metadata:
+      labels:
+        app: my-crud-app
+    spec:
+      containers:
+        - name: my-crud-app
+          image: 951372799737.dkr.ecr.ap-south-1.amazonaws.com/gigax01/app-deploy-00x0:latest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: db-secret
+                  key: database_url
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-crud-app
+spec:
+  type: LoadBalancer
+  selector:
+    app: my-crud-app
+  ports:
+    - port: 80
+      targetPort: 3000
