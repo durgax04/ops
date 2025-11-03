@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/durgax04/rag-embedding-pdf-chat.git'
+    repoURL: 'https://github.com/durgax04/ops.git'
     targetRevision: main
-    path: ops/pdfchatapp
+    path: pdfchatapp
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
