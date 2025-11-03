@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: chatwithpdf
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/durgax04/rag-embedding-pdf-chat.git'
+    targetRevision: main
+    path: k8s
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
