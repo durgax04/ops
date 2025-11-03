@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/durgax04/rag-embedding-pdf-chat.git'
     targetRevision: main
-    path: k8s
+    path: ops/pdfchatapp
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
