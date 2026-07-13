@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: chatwithpdf
-          image: 263323232352.dkr.ecr.ap-south-1.amazonaws.com/gigax01/pdfchatapp:a3f83f86c4d765fc4eab29ce0a2388b1896bb9b1
+          image: 470561031764.dkr.ecr.us-east-1.amazonaws.com/gigax01/pdfchatapp:latest
           ports:
             - containerPort: 3000
           env:
